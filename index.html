@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!--meta tags-->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,inital-scale=1.0">
+      <meta http-equiv="refresh" content="100">
+      <!--meta tags-->
+      <title>navids practice2</title>
+      <link rel="icon" href="media/favicon.ico">
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   </head>
+   <style>
+      /* basic setup*/
+* {
+   box-sizing: border-box;
+   font-family:verdana,arial,sans-serif;
+   color:lightcoral;
+}
+html {
+   scroll-behavior: smooth;
+ }
+
+a:link {color:rgb(248, 167, 167);text-decoration: none;}
+a:visited {color:rgb(247, 162, 162);text-decoration: none}
+a:hover {color:rgb(250, 100, 100);text-decoration: none}
+a:active {color:rgb(243, 87, 87);text-decoration: none}
+::selection {
+   color:whitesmoke;
+   background-color:black;
+}
+/*basic setup*/
+/*background*/
+.color-change-5x{animation:color-change-5x 8s linear infinite alternate both}
+ @keyframes color-change-5x{0%{background:#19dcea}25%{background:#b22cff}50%{background:#ea2222}75%{background:#f5be10}100%{background:#3bd80d}0%{background:#19dcea}}
+/*background*/
+/*scrollbar*/
+ ::-webkit-scrollbar {
+    width:10px;
+ }
+ ::-webkit-scrollbar-track {
+    border-radius:2px;
+ }
+ ::-webkit-scrollbar-thumb {
+    background:rgba(255, 255, 255, 0.7);
+    border-radius:2px;
+ }
+ ::-webkit-scrollbar-thumb:hover {
+    background:rgba(128, 128, 128, 0.9);
+ }
+ /*scrollbar*/
+
+
+
+
+
+
+ .gallery {
+    border:1px solid grey;
+    float:left;
+    width:24.99999%;
+ }
+ .gallery img {
+    padding:10px;
+ }
+ .desc {
+    text-align:center;
+    padding:5px 15px;
+    font-size:25px;
+ }
+ .hack::after {
+   content:"";
+   display:table;
+   clear:both;
+}
+@media screen and (max-width:1000px) {
+   .gallery {
+      width:48%;
+      margin-bottom:5px;
+      margin:0.5%;
+   }
+}
+@media screen and (max-width:700px) {
+   .gallery {
+      width:100%;
+      margin-right:0;
+      margin-bottom:7px;
+   }
+}
+   
+
+.nav ul {
+   margin:0;
+   padding:0;
+   list-style-type:none;
+   background:rgba(255, 255, 255, 0.7);
+   overflow:hidden;
+}
+.nav li {float:left;width:25%;}
+.nav li a {
+   padding:15px ;
+   width:100%;
+   display:inline-block;
+   text-align:center;
+   text-decoration: none;
+   font-size:25px;
+}
+@media screen and (max-width:600px) {
+   .nav li {
+      width:100%;
+   }
+}
+.header-text {
+   background:rgba(255, 255, 255, 0.7);
+   padding:30px 20px 70px 20px;
+   text-align: center;
+   font-size:45px;
+}
+ion-icon {font-size: 40px;}
+.top {
+   position:fixed;
+   bottom:30px;
+   right:30px;
+}
+#myBtn {
+   display:none;
+   position:absolute;
+   border:none;
+   outline:none;
+   background-color: white;
+   cursor:pointer;
+   padding:7px;
+   border-radius:20px;
+   animation:Btn 0.5s;
+   animation-fill-mode:forwards;
+   animation-timing-function: ease-in-out;
+   opacity:0;
+}
+@keyframes Btn {
+   0% {opacity:0;right:-150px;bottom:0;}
+   100% {opacity:1;right:10px;bottom:0;}
+}
+#myBtn:hover {
+   background-color:gray;
+}
+.header {
+   position:relative;
+
+}
+.dropdown-p {
+   width:25%;
+   position:absolute;
+   bottom:0;
+   left:0;
+}
+.dropdown {
+   position: relative;
+   width:100%;
+}
+.dropdown-bt {
+   width:100%;
+   z-index:2;
+}
+.dropdown-bt button {
+   color:black;
+   background-color:transparent;
+   width:100%;
+   padding:14px 20px;
+   cursor:pointer;
+   border:none;
+   outline:none;
+   
+}
+.dropdown-contant {
+   width:100%;
+   position:absolute;
+   background-color:rgba(255, 255, 255, 0.7);
+   width:100%;
+   display:none;
+   animation-name: dropdown;
+   animation-duration: 0.4s;
+   animation-timing-function: ease-out;
+}
+.dropdown-contant a {
+   width:100%;
+   font-size:1.25em;
+   display:block;
+   text-decoration: none;
+   padding:14px 20px; text-align:center;
+   word-wrap: break-word;
+  
+}
+.dropdown:hover .dropdown-contant {
+   display:block;
+}
+@keyframes dropdown {
+   0% {top:100%;left:-450px;}
+   100% {top:100%;left:0;}
+}
+.tooltip {
+   position:relative;
+   z-index: 99;
+   display: inline-block;
+ 
+}
+.tooltip span {
+   display:none;
+   width:100px;
+   font-size:0.85em;
+   position:absolute;
+   color:white;
+   top:20px;left:80px;
+   margin-left:15px;
+   background-color:rgba(0, 0, 0, 0.712);
+   padding:6px 8px;border-radius:5px;
+}
+.dropdown:hover .tooltip span{
+   display:inline;
+}
+   </style>
+   <body style="background-color:lightblue;">
+      <div class="header">
+      <div class="header-text">Image Gallery </div>
+      <div class="dropdown-p">
+      <div class="dropdown">
+         <div class="tooltip">
+            <span>random link</span>
+         </div>
+         <div class="dropdown-bt"><button><ion-icon name="caret-down-outline"></ion-icon></button></div>
+         <div class="dropdown-contant">
+            <a href="#car2">car</a>
+            <a href="#fantesy1">wallpaper</a>
+            <a href="#nature2">nature</a>
+            <a href="#nature4">nature</a>
+         </div>
+         
+      </div>
+   </div>
+   </div>
+      <div class="hack">
+      <div class="gallery">
+         <img id="nature1" style="width:100%;height:auto;" src="media/image.jpg">
+         <div class="desc">nature</div>
+      </div>
+      <div class="gallery">
+         <img id="nature2" style="width:100%;height:auto;" src="media/image2.jpg">
+         <div class="desc">nature</div>
+      </div>
+      <div class="gallery">
+         <img id="nature3" style="width:100%;height:auto;" src="media/image3.jpg">
+         <div class="desc">nature</div>
+      </div>
+      <div  class="gallery">
+         <img id="nature4" style="width:100%;height:auto;" src="media/image4.jpg">
+         <div class="desc">nature</div>
+      </div>
+      <div  class="gallery">
+         <img id="fantesy1" style="width:100%;height:auto;" src="media/image5.jpg">
+         <div class="desc">fantesy</div>
+      </div>
+      <div   class="gallery">
+         <img id="nature6" style="width:100%;height:auto;" src="media/image6.jpg">
+         <div class="desc">nature</div>
+      </div>
+      
+      <div  class="gallery">
+         <img id="car2" style="width:100%;height:auto;" src="media/image8.jpg">
+         <div class="desc">Car</div>
+      </div>
+      </div>
+      <div class="top">
+         <button onclick="topFunction()" id="myBtn"><ion-icon name="arrow-up-outline"></ion-icon></button>
+      </div>
+         
+   </body>
+   <script>
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+      </script>
+</html>
