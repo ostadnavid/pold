@@ -4,8 +4,8 @@
       <title>landing page</title>
       <meta charset="UTF-8">
       <meta name="author" content="Navid Poladi">
-      <meta name="theme-color" content="rgb(119, 136, 153)"
-      <meta name="viewport" content="width=device-width, inital-scale=1.0">
+      <meta name="theme-color" content="rgb(119, 136, 153)">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
    </head>
@@ -22,7 +22,7 @@
             position:relative;
             left:100%;
             top:0;
-            height:800px;
+            height:900px;
             width:0;
             background-color: rgba(0, 0, 0, 0.705);
             overflow:hidden;
@@ -31,8 +31,8 @@
 
          }
          .menu .contant {
-            margin-top:50px;
-            width:20%;
+            margin:40px auto 20px 40px;
+            width:25%;
             float: left;
             height: auto;
          }
@@ -40,11 +40,11 @@
             display:block;
             padding:30px 10px 30px 40px;
             text-decoration: none;
-            font-size: 1.75em;
+            font-size: 2em;
             color:white;
             word-break: keep-all;
          }
-         @media screen and (max-width:700px) {
+         @media screen and (max-width:900px) {
             .menu .contant a {
                padding:30px 15px 30px 7px;
             }
@@ -108,10 +108,10 @@
         }
         .container .small-text {
          position: absolute;
-           left:55%;
-           top:60%;
+           left:60%;
+           top:70%;
            transform: translate(-50%,-50%);
-           font-size: 1.5em;
+           font-size: 1.6em;
            color:white;
            animation:container-text 1.5s ease;
            animation-fill-mode: forwards;
@@ -127,11 +127,11 @@
            background:url('media/camera2.jpg') no-repeat center center fixed ;
            background-size: cover;
            width:100%;
-           height:500px;
+           height:650px;
         }
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:900px) {
            .about {
-              height:800px;
+              height:900px;
               overflow: hidden;
            }
         }
@@ -146,7 +146,7 @@
            transform:translate(-50%,-50%0);
            word-break:break-all;
         }
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:900px) {
          .about .info-box {
             width:90%;
             position:absolute;
@@ -165,12 +165,12 @@
            transform:translate(-50%,-50%0);
            word-break:break-all;
         }
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:900px) {
          .about .info-box1 {
             width:90%;
             position:absolute;
            left:5%;
-           top:25%;
+           top:27%;
          }
         }
         .about .icons {
@@ -182,12 +182,12 @@
            height:480px;
            overflow: hidden;
         }
-        @media screen and (max-width:700px) {
+        @media screen and (max-width:900px) {
          .about .icons {
             width:90%;
             position:absolute;
            right:5%;
-           top:45%;
+           top:50%;
          }
 }
         /*about*/
@@ -276,7 +276,7 @@
    height:600px;
    margin-top:350px;
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) {
    .contant1 {
       height:750px;
    }
@@ -285,12 +285,26 @@
    position: absolute;
    left:2%;
    top:2%;
-   padding:3px;
+   
+   padding:2px;
    background-color:rgba(0, 0, 0, 0.747);
    width:75%;
    color:white;
    z-index: 2;
 
+}
+@media screen and (max-width:900px) {
+   .contant1 form {
+      position: absolute;
+   left:2%;
+   top:2%;
+   right:2%;
+   padding:2px;
+   background-color:rgba(0, 0, 0, 0.747);
+   width:75%;
+   color:white;
+   z-index: 2;
+   }
 }
 input[type=submit] {
    width:25%;
@@ -314,10 +328,10 @@ input[type=submit] {
    float: left;
 }
 .coluom input {
-   font-size: 1.20em;
+   font-size: 1.25em;
    border: none;
    background-color: whitesmoke;
-   padding:12px 12px 4px 12px;
+   padding:14px 14px 6px 14px;
    margin:10px 4px 8px 0px;
    width:80%;
    float: left;
@@ -329,10 +343,10 @@ input[type=submit] {
    border-bottom:4px solid lightblue;
 }
 .coluom textarea {
-   font-size: 1.20em;
+   font-size: 1.25em;
    border: none;
    background-color: whitesmoke;
-   padding:12px 12px 4px 12px;
+   padding:14px 14px 6px 14px;
    margin:10px 4px 8px 0px;
    width:80%;
    float: left;
@@ -343,8 +357,8 @@ input[type=submit] {
    outline: none;
 }
 
-@media screen and (max-width:700px){
-   .coluom label,.coluom input,.coluom textarea,.contant1 form ,input[type=submit] {       width:99%;   
+@media screen and (max-width:900px){
+   .coluom label,.coluom input,.coluom textarea,.contant1 form ,input[type=submit] {       width:98%;   
     }
 }
 .links {
@@ -370,23 +384,26 @@ input[type=submit] {
    font-size: 66px;
    color:white;
 }
-@media screen and (max-width:700px) {
+@media screen and (max-width:900px) {
    .links {
       position:absolute;
-   left:-2%;
-   top:80%;
-   width:50%;
+   left:0;
+   top:85%;
+   width:100%;
    margin:auto;
    height: auto;
    overflow: hidden;
    }
    .links .card a {
    display:inline-block;
+   z-index: 99;
 }
    .links .card {
       width:30%;
-      float:left;
+      float: left;
+      text-align: center;
       margin:6px 0 0 6px;
+      z-index: 99;
    }
    .links .card:hover {
    transform: scale(1.3,1.3);
@@ -498,19 +515,21 @@ footer {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
      menu0.style.left = "100%";
      menu0.style.width = "0";
+     document.getElementById('menu-bt0').style.display = "block";
+     document.getElementById('menu-bt-close0').style.display = "none";
   } 
 }
 
-
-
-
-
-         function opening() {
-            document.getElementById('menu0').style.left = "70%";
+function opening() {
+            document.getElementById('menu0').style.left = "0";
             document.getElementById('menu0').style.width = "100%";
-            document.getElementById('menu-bt0').style.display = "none";
             document.getElementById('menu-bt-close0').style.display = "block";
+            document.getElementById('menu-bt0').style.display = "none";
          }
+
+
+
+         
          function closing() {
             document.getElementById('menu0').style.left = "100%";
             document.getElementById('menu0').style.width = "0";
@@ -518,8 +537,8 @@ footer {
             document.getElementById('menu-bt0').style.display = "block";
          }
 
-         var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 1;
+ showSlides(slideIndex);
 
 
 function plusSlides(n) {
