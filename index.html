@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>landing page</title>
+      <meta charset="UTF-8">
+      <meta name="author" content="Navid Poladi">
+      <meta name="theme-color" content="rgb(119, 136, 153)"
+      <meta name="viewport" content="width=device-width, inital-scale=1.0">
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   </head>
+   <style>
+      html {
+         scroll-behavior: smooth;
+      }
+      * {margin:0;padding:0;font-family: arial,verdana,sans-serif;overflow-x:hidden;box-sizing:border-box}
+      body {
+         background-color:rgb(119, 136, 153);
+      }
+      /*menu */
+         .menu {
+            position:relative;
+            left:100%;
+            top:0;
+            height:800px;
+            width:0;
+            background-color: rgba(0, 0, 0, 0.705);
+            overflow:hidden;
+            z-index: 3;
+            transition: .5s ease;
+
+         }
+         .menu .contant {
+            margin-top:50px;
+            width:20%;
+            float: left;
+            height: auto;
+         }
+         .menu .contant a {
+            display:block;
+            padding:30px 10px 30px 40px;
+            text-decoration: none;
+            font-size: 1.75em;
+            color:white;
+            word-break: keep-all;
+         }
+         @media screen and (max-width:700px) {
+            .menu .contant a {
+               padding:30px 15px 30px 7px;
+            }
+         }
+      /*menu */
+      /*menu button*/
+      .menu-bt {
+         position: absolute;
+         right:20px;
+         top:20px;
+         display: block;
+         z-index: 4;
+        
+      }
+      .menu-bt button {
+         border:none;
+         background-color: transparent;
+         cursor: pointer;
+       
+      }
+      .menu-bt button ion-icon {
+         font-size:3em;
+         color:white;
+      }
+      /*closing button*/
+      .menu-bt-close {
+         position: absolute;
+         right:20px;
+         top:20px;
+         display:none;
+         z-index: 4;
+       
+      }
+      .menu-bt-close button {
+         border:none;
+         background-color: transparent;
+         cursor: pointer;
+      }
+      .menu-bt-close button ion-icon {
+         font-size:3em;
+         color:white;
+      }
+       /*menu button*/
+        /*container Img*/
+        .container {
+           position:absolute;
+           background:url('media/img_man.jpg') no-repeat center center fixed ;
+           background-size: cover;
+           width:100%;
+           height:500px;
+        }
+        .container .text {
+           position: absolute;
+           left:50%;
+           top:50%;
+           transform: translate(-50%,-50%);
+           font-size: 2.5em;
+           color:white;
+           animation:container-text 0.5s ease-in;
+           animation-fill-mode: forwards;
+        }
+        .container .small-text {
+         position: absolute;
+           left:55%;
+           top:60%;
+           transform: translate(-50%,-50%);
+           font-size: 1.5em;
+           color:white;
+           animation:container-text 1.5s ease;
+           animation-fill-mode: forwards;
+        }
+        @keyframes container-text {
+           0% {opacity: 0;} 40% {opacity:0;} 100% {opacity:1}
+        }
+        /*container Img*/
+        /*about*/
+        .about {
+           margin-top: 125px;
+            position:relative;
+           background:url('media/camera2.jpg') no-repeat center center fixed ;
+           background-size: cover;
+           width:100%;
+           height:500px;
+        }
+        @media screen and (max-width:700px) {
+           .about {
+              height:800px;
+              overflow: hidden;
+           }
+        }
+        .about .info-box {
+           position:absolute;
+           left:5%;
+           top:20%;
+           background-color:rgba(0, 0, 0, 0.74);
+           color:white;
+           width: 40%;
+           padding:14px 20px;
+           transform:translate(-50%,-50%0);
+           word-break:break-all;
+        }
+        @media screen and (max-width:700px) {
+         .about .info-box {
+            width:90%;
+            position:absolute;
+           left:5%;
+           top:5%;
+         }
+        }
+        .about .info-box1 {
+           position:absolute;
+           left:5%;
+           top:50%;
+           background-color:rgba(0, 0, 0, 0.74);
+           color:white;
+           width: 40%;
+           padding:14px 20px;
+           transform:translate(-50%,-50%0);
+           word-break:break-all;
+        }
+        @media screen and (max-width:700px) {
+         .about .info-box1 {
+            width:90%;
+            position:absolute;
+           left:5%;
+           top:25%;
+         }
+        }
+        .about .icons {
+           position:absolute;
+           right:2%;
+           top:3%;
+           background-color: rgba(0, 0, 0, 0.74);
+           width:45%;
+           height:480px;
+           overflow: hidden;
+        }
+        @media screen and (max-width:700px) {
+         .about .icons {
+            width:90%;
+            position:absolute;
+           right:5%;
+           top:45%;
+         }
+}
+        /*about*/
+
+        
+
+/*slideshow*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+ 
+}
+
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.data-somep {
+   color:white;
+   text-align: center;
+   font-size: 1.5em;
+}
+/*slideshow*/
+.contant1 {
+   position: relative;
+   background:url('media/camera1.jpg') no-repeat center center fixed;
+   background-size:cover;
+   width:100%;
+   height:600px;
+   margin-top:350px;
+}
+@media screen and (max-width:700px) {
+   .contant1 {
+      height:750px;
+   }
+}
+.contant1 form {
+   position: absolute;
+   left:2%;
+   top:2%;
+   padding:3px;
+   background-color:rgba(0, 0, 0, 0.747);
+   width:75%;
+   color:white;
+   z-index: 2;
+
+}
+input[type=submit] {
+   width:25%;
+   float:right;
+   padding:8px 8px 8px 8px;
+   margin:8px 8px 8px auto;
+   font-size: 1.5em;
+   background-color: rgba(255, 255, 255);
+   outline: none;
+   border:none;
+   cursor: pointer;
+}
+
+   .coluom {
+      width:100%;
+   }
+.coluom label {
+   padding:14px 18px;
+   font-size: 1.5em;
+   width:19%;
+   float: left;
+}
+.coluom input {
+   font-size: 1.20em;
+   border: none;
+   background-color: whitesmoke;
+   padding:12px 12px 4px 12px;
+   margin:10px 4px 8px 0px;
+   width:80%;
+   float: left;
+   border-bottom:4px solid lightblue;
+}
+.coluom input:focus {
+   border:none;
+   outline:none;
+   border-bottom:4px solid lightblue;
+}
+.coluom textarea {
+   font-size: 1.20em;
+   border: none;
+   background-color: whitesmoke;
+   padding:12px 12px 4px 12px;
+   margin:10px 4px 8px 0px;
+   width:80%;
+   float: left;
+   border-bottom:4px solid lightblue;
+   resize: vertical;
+}
+.coluom textarea:focus {
+   outline: none;
+}
+
+@media screen and (max-width:700px){
+   .coluom label,.coluom input,.coluom textarea,.contant1 form ,input[type=submit] {       width:99%;   
+    }
+}
+.links {
+   position:absolute;
+   right:5%;
+   top:10%;
+   width:20%;
+   height:auto;
+   z-index: 1;
+}
+.links .card {
+   width:50%;
+   height: auto;
+   transition:  .5s ease;
+}
+.links .card:hover {
+   transform: translate(50%,0);
+}
+.links .card a {
+   display:block;
+}
+.links .card a ion-icon {
+   font-size: 66px;
+   color:white;
+}
+@media screen and (max-width:700px) {
+   .links {
+      position:absolute;
+   left:-2%;
+   top:80%;
+   width:50%;
+   margin:auto;
+   height: auto;
+   overflow: hidden;
+   }
+   .links .card a {
+   display:inline-block;
+}
+   .links .card {
+      width:30%;
+      float:left;
+      margin:6px 0 0 6px;
+   }
+   .links .card:hover {
+   transform: scale(1.3,1.3);
+}
+}
+footer {
+   background-color: black;
+   color:white;
+   text-align: center;
+   padding:16px 0 16px 0;
+   font-size:1em;
+}
+   </style>
+   <body>
+      <div id="home" class="container">
+         <div class="text">Im John Dou</div>
+         <div class=" small-text">-and Im PhotoGraph</div>
+      </div>
+      <div id="menu-bt0" class="menu-bt">
+         <button onclick="opening()">
+            <ion-icon name="menu-outline"></ion-icon>
+         </button>
+      </div>
+      <div id="menu-bt-close0" class="menu-bt-close">
+         <button onclick="closing()">
+            <ion-icon name="close-outline"></ion-icon>
+         </button>
+      </div>
+      <div id="menu0" class="menu">
+         <div class="contant">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contant">Contant</a>
+         </div>
+      </div>
+      <div id="about" class="about">
+         <div class="info-box">
+            <h3 style="font-size:2em">SomeText</h3>
+            <p>SomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeText</p>
+         </div>
+         <div class="info-box1">
+            <h3 style="font-size:2em">SomeText</h3>
+            <p>SomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeTextSomeText</p>
+         </div>
+         <div class="icons">
+
+<div class="slideshow-container">
+
+   <div class="mySlides fade">
+     <div class="numbertext">1 / 3</div>
+     <img src="media/image.jpg" style="width:100%">
+   </div>
+ 
+   <div class="mySlides fade">
+     <div class="numbertext">2 / 3</div>
+     <img src="media/image2.jpg" style="width:100%">
+     
+   </div>
+ 
+   <div class="mySlides fade">
+     <div class="numbertext">3 / 3</div>
+     <img src="media/image3.jpg" style="width:100%">
+     
+   </div>
+ 
+   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+ </div>
+ <br>
+ <div class="data-somep">
+   Some Project
+ </div>
+ </div>
+ </div>
+ <div id="contant" class="contant1">
+    <form>
+       <div class="coluom">
+       <label for="name">Name</label>
+       <input placeholder="john duoe" id="name" name="name" type="text"></div>
+       <div class="coluom"><label for="E-mail">E-mail</label>
+       <input placeholder="example@example.com" id="E-mail" name="E-mail" type="email" required></div>
+       <div class="coluom">
+       <label for="messege">Subject</label>
+       <textarea placeholder="write someting" id="messege" name="massege" cols="10" rows="8"></textarea></div>
+       <input type="submit">
+    </form>
+ 
+    <div class="links">
+       <div class="card">
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+       </div>
+       <div class="card">
+         <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      </div>
+      <div class="card">
+         <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      </div>
+   </div>
+    </div>
+    <footer>
+      <h2>ostadnavid.github.io/pold/ &copy;</h2>
+    </footer>
+    
+
+      <script>
+         window.onscroll = function() {scrollFunction()};
+
+         function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+     menu0.style.left = "100%";
+     menu0.style.width = "0";
+  } 
+}
+
+
+
+
+
+         function opening() {
+            document.getElementById('menu0').style.left = "70%";
+            document.getElementById('menu0').style.width = "100%";
+            document.getElementById('menu-bt0').style.display = "none";
+            document.getElementById('menu-bt-close0').style.display = "block";
+         }
+         function closing() {
+            document.getElementById('menu0').style.left = "100%";
+            document.getElementById('menu0').style.width = "0";
+            document.getElementById('menu-bt-close0').style.display = "none";
+            document.getElementById('menu-bt0').style.display = "block";
+         }
+
+         var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+      </script>
+   </body>
+</html>
